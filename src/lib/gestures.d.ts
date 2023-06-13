@@ -5,7 +5,7 @@ declare module 'svelte/elements' {
 
     interface DOMAttributes<T extends EventTarget> {
         /**
-         * An pointing device (either mouse or touch) is pressed on an element.
+         * A pointing device (either mouse or touch) is pressed on an element.
          */
         'on:down'?: DownEventHandler<T> | undefined | null
     }

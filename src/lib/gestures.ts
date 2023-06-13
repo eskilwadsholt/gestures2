@@ -5,6 +5,9 @@ touchstart, touchend, touchcancel, touchmove
 .split(',')
 .map(s => s.trim())
 
+export type Info = { detail: { e: Event, message: string }} | Event
+export type Point = { x: Number, y: number }
+
 class Gesture {
     node: HTMLElement
 
@@ -17,7 +20,6 @@ class Gesture {
 
     down = (e: MouseEvent | TouchEvent) => {
         console.log("Received a down event in gestures")
-        type Info = { detail: { e: Event, message: string }} | Event
         const info: Info = {
             detail: {
                 e,
